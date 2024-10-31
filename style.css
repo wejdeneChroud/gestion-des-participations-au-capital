@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #c0c4c4;
+    margin-top: 20px;
+}
+
+.navbar-nav .nav-link {
+    transition: text-shadow 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    text-shadow: 0 0 5px rgba(27, 69, 147, 0.8);
+}
+
+#logoutbtn {
+    background-color: #b0d9fd;
+    color: black;
+    font-size: 14px;
+    padding: 5px 20px;
+    border-radius: 40px;
+    border: none;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+#logoutbtn:hover {
+    background: #929292;
+    box-shadow: 0px 0px 7px 0px #878181fb;
+}
+
+/* ##################################################################### */
+
+.parallax {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    position: relative;
+}
+
+.filler_element {
+    background: #4f4d4d;
+}
+
+.space {
+    height: 15px;
+    background: #4f4d4d;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wavee.png);
+    background-size: 1000px 100px;
+    animation: animate 4s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.25s);
+}
+
+#wave1 {
+    z-index: 10;
+    opacity: 1;
+    background-position-x: 400px;
+}
+
+#wave2 {
+    z-index: 9;
+    opacity: 0.5;
+    background-position-x: 300px;
+}
+
+#wave3 {
+    z-index: 8;
+    opacity: 0.3;
+    background-position-x: 200px;
+}
+
+#wave4 {
+    z-index: 9;
+    opacity: 0.7;
+    background-position-x: 100px;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+/* ##################################################################### */
+
+.input-field {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.input-field input {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    outline: none;
+    border: 1px solid rgba(119, 119, 119, 0.25);
+    border-radius: 10px;
+    font-size: 15px;
+    color: #000000;
+    padding: 20px 45px 18px 20px;
+}
+
+.size {
+    width: 80px;
+    height: auto;
+}
+
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    color: #3e4145;
+}
+
+.btn-outline-primary {
+    border-color: #1495db;
+    background: transparent;
+    color: #1495db;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.card {
+    background-clip: padding-box;
+    box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.fileinput {
+    position: absolute;
+    visibility: hidden;
+}
+
+
+/* ########################################################## */
+
+.project {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.popup {
+    position: fixed;
+    max-width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f4efef;
+    padding: 20px;
+    border-radius: 3%;
+    border: 1px solid #2f2e2e;
+    z-index: 1000;
+    width: 700px;
+}
+
+.description {
+    overflow-wrap: break-word;
+}
+
+h3 {
+    text-align: center;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+footer ul a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(225,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transform: all 0.5 ease;
+}
+footer ul a:hover{
+    color: #24262b;
+    background-color: #fff;
+}
+
+@media only screen and (max-width: 800px) {
+    .popup{
+        max-width: 500px;
+    }
+}
